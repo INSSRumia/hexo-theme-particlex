@@ -2,11 +2,11 @@
 # https://github.com/theme-particlex/hexo-theme-particlex
 
 # Avatar image
-avatar: /images/avatar.jpg
+avatar: /images/avatar.png
 
 # Home page background image
 background:
-    - /images/background.jpg
+    - /images/background.png
 
 # Loading image
 loading: /images/loading.gif
@@ -44,17 +44,31 @@ menu:
         name: tags
         theme: solid
         link: /tags
+    # <name>:
+    #     name: <icon-name>
+    #     theme: <icon-theme>
+    #     src: <link-url>
 
 # Side info card
 card:
     enable: true
     description: |
-        Description
+        好热~~~啊！
         ...
     iconLinks:
-    friendLinks:
-        Argvchs: https://argvchs.github.io
 
+        Github:
+            name: github
+            theme: brands
+            link: https://github.com/INSSRumia
+        
+        # <name>:
+        #    name: <icon-name>
+        #    theme: <icon-theme>
+        #    link: <link-url>
+    friendLinks:
+        {}
+        # <name>: <link-url>
 # Footer info
 footer:
     since: 2022
@@ -91,24 +105,24 @@ crypto:
 
 # Search
 search:
-    enable: false
+    enable: true
 
 # Giscus
 # https://github.com/giscus/giscus
 giscus:
     enable: false
     src: https://giscus.app/client.js
-    repo:
-    repoID:
-    category:
-    categoryID:
-    mapping: pathname
+    repo: INSSRumia/inssrumia.github.io
+    repoID: R_kgDOJFTr2A
+    category: Comments
+    categoryID: DIC_kwDOJFTr2M4CUpXm
+    mapping: url #pathname
     strict: 0
     reactionsEnabled: 1
     emitMetadata: 0
-    inputPosition: bottom
+    inputPosition: top #bottom
     theme: preferred_color_scheme
-    lang:
+    lang: zh-CN
 
 # Gitalk
 # https://github.com/gitalk/gitalk
@@ -119,8 +133,13 @@ gitalk:
     repo: # The name of repository of store comments
     owner: # GitHub repo owner
     admin: # GitHub repo owner and collaborators, only these guys can initialize github issues
-    language: # en, zh-CN, zh-TW, es-ES, fr, ru, de, pl and ko are currently available
+    language: zh-CN #en, zh-TW, es-ES, fr, ru, de, pl and ko are currently available
     proxy: # CORS proxy
+    sites: 
+        {}
+        # <www.example.com>:
+        #    clientID: <client-id>
+        #    clientSecret: <client-secret>
 
 # Waline
 # https://github.com/walinejs/waline
@@ -143,7 +162,7 @@ waline:
         - link
     requiredMeta: # Set required meta field, e.g.: [nick] | [nick, mail]
         - nick
-    lang: # Language, available values: en-US, zh-CN, zh-TW, pt-BR, ru-RU, jp-JP
+    lang: zh-CN # Language, available values: en-US, zh-CN, zh-TW, pt-BR, ru-RU, jp-JP
     wordLimit: 0 # Word limit, no limit when setting to 0
     login: enable # Whether enable login, can choose from 'enable', 'disable' and 'force'
     pageSize: 10 # Comment per page
@@ -155,4 +174,4 @@ twikoo:
     envID:
     region:
     path: location.pathname
-    lang:
+    lang: zh-CN

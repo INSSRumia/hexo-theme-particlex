@@ -23,6 +23,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
     <link rel="icon" href="<%- url_for(theme.avatar) %>" />
     <%- partial("import", { type }) %>
+
+    <!--为网页添加背景-->
+    <canvas
+        id="background"
+        style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; pointer-events: none; z-index: -1"
+    ></canvas>
+    <script src="/js/background.min.js"></script>
+
+    <!--修改鼠标样式-->
+    <div id="cursor"></div>
+    <link rel="stylesheet" href="/css/cursor.min.css" />
+    <script src="/js/cursor.min.js"></script>
+
+    <!--为网页添加背景音乐的格式-->
+    <style>
+        .musicController{
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        }
+    </style>
 </head>
 <body>
     <div id="layout">
@@ -52,5 +73,10 @@
     <% if (type === "post" && page.comments) { %>
     <%- partial("comment") %>
     <% } %>
+
+    <!--为网页添加背景音乐-->
+    <audio controls class = "musicController" loop autoplay="true">
+    <source src="/music/GONTITI - 1967.mp3" type="audio/mpeg">
+    </audio>
 </body>
 </html>
